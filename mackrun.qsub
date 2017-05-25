@@ -1,0 +1,18 @@
+#!/bin/tcsh
+#
+#$ -cwd
+#$ -j y
+#$ -o run055.out
+#$ -q main
+#$ -pe openmpi_ib 100
+
+# For compiling
+# qrsh -pe openmpi_ib 1 -N compiling
+
+# 0.1 Set SGE Job Name (recommended)
+#$ -N Ross_5km
+
+module load openmpi/gcc/64/1.6.5
+
+echo "mpiexec -n 100 oceanM ocean_ross.in"
+      mpiexec -n 100 oceanM ocean_ross.in

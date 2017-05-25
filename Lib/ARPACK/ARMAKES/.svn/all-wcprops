@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES
+END
+ARmake.MPI-Linux
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.MPI-Linux
+END
+ARmake.SGI
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.SGI
+END
+ARmake.BLACS-SP2
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.BLACS-SP2
+END
+ARmake.MPI-SP2
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.MPI-SP2
+END
+ARmake.SUN4
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.SUN4
+END
+ARmake.BLACS-NX-I860
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.BLACS-NX-I860
+END
+ARmake.CJ
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.CJ
+END
+ARmake.CRAY
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.CRAY
+END
+ARmake.BLACS-SGI_mp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.BLACS-SGI_mp
+END
+ARmake.mpif90-Linux
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.mpif90-Linux
+END
+ARmake.SP2
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.SP2
+END
+ARmake.BLACS-SGI
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.BLACS-SGI
+END
+ARmake.MPI-sunmos
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.MPI-sunmos
+END
+ARmake.BLACS-SUN4
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.BLACS-SUN4
+END
+ARmake.BLACS-T3D
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.BLACS-T3D
+END
+ARmake.MPI-SUN4
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.MPI-SUN4
+END
+ARmake.MPI-T3D
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.MPI-T3D
+END
+ARmake.BLACS-CJ
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.BLACS-CJ
+END
+ARmake.SGI_mp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.SGI_mp
+END
+ARmake.MPI-CJ
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARMAKES/ARmake.MPI-CJ
+END

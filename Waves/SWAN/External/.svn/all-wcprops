@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/src/!svn/ver/266/trunk/Waves/SWAN/External
+END
+inlet_test_grid_coord.grd
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/src/!svn/ver/34/trunk/Waves/SWAN/External/inlet_test_grid_coord.grd
+END
+swan.edt
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/External/swan.edt
+END
+inlet_test_bathy.bot
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/src/!svn/ver/34/trunk/Waves/SWAN/External/inlet_test_bathy.bot
+END
+test_head_curv_grid_coord.grd
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/src/!svn/ver/34/trunk/Waves/SWAN/External/test_head_curv_grid_coord.grd
+END
+swan_inlet_test.in
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/src/!svn/ver/266/trunk/Waves/SWAN/External/swan_inlet_test.in
+END
+test_head_curv_bathy.bot
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/src/!svn/ver/34/trunk/Waves/SWAN/External/test_head_curv_bathy.bot
+END
+swan_test_head.in
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/src/!svn/ver/266/trunk/Waves/SWAN/External/swan_test_head.in
+END

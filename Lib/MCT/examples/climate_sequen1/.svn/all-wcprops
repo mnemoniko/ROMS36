@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/src/!svn/ver/402/trunk/Lib/MCT/examples/climate_sequen1
+END
+srcmodel.F90
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/src/!svn/ver/402/trunk/Lib/MCT/examples/climate_sequen1/srcmodel.F90
+END
+coupler.F90
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/src/!svn/ver/402/trunk/Lib/MCT/examples/climate_sequen1/coupler.F90
+END
+dstmodel.F90
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/src/!svn/ver/402/trunk/Lib/MCT/examples/climate_sequen1/dstmodel.F90
+END
+master.F90
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/src/!svn/ver/402/trunk/Lib/MCT/examples/climate_sequen1/master.F90
+END
+mutils.F90
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/src/!svn/ver/402/trunk/Lib/MCT/examples/climate_sequen1/mutils.F90
+END
+src.rc
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/src/!svn/ver/23/trunk/Lib/MCT/examples/climate_sequen1/src.rc
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/src/!svn/ver/23/trunk/Lib/MCT/examples/climate_sequen1/Makefile
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/src/!svn/ver/23/trunk/Lib/MCT/examples/climate_sequen1/README
+END
+dst.rc
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/src/!svn/ver/23/trunk/Lib/MCT/examples/climate_sequen1/dst.rc
+END
+TS1.dat
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/src/!svn/ver/23/trunk/Lib/MCT/examples/climate_sequen1/TS1.dat
+END

@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SYM
+END
+ssdrv1.f
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SYM/ssdrv1.f
+END
+dsdrv1.f
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SYM/dsdrv1.f
+END
+ssdrv2.f
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SYM/ssdrv2.f
+END
+dsdrv2.f
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SYM/dsdrv2.f
+END
+ssdrv3.f
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SYM/ssdrv3.f
+END
+dsdrv3.f
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SYM/dsdrv3.f
+END
+ssdrv4.f
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SYM/ssdrv4.f
+END
+dsdrv4.f
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SYM/dsdrv4.f
+END
+ssdrv5.f
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SYM/ssdrv5.f
+END
+dsdrv5.f
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SYM/dsdrv5.f
+END
+ssdrv6.f
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SYM/ssdrv6.f
+END
+dsdrv6.f
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SYM/dsdrv6.f
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SYM/README
+END
+makefile
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SYM/makefile
+END

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/src/!svn/ver/402/trunk/Lib/MCT
+END
+mkinstalldirs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/src/!svn/ver/23/trunk/Lib/MCT/mkinstalldirs
+END
+configure
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/src/!svn/ver/402/trunk/Lib/MCT/configure
+END
+configure.ac
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/src/!svn/ver/402/trunk/Lib/MCT/configure.ac
+END
+Makefile.conf.in
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/src/!svn/ver/23/trunk/Lib/MCT/Makefile.conf.in
+END
+COPYRIGHT
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/src/!svn/ver/23/trunk/Lib/MCT/COPYRIGHT
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/src/!svn/ver/402/trunk/Lib/MCT/README
+END
+aclocal.m4
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/src/!svn/ver/402/trunk/Lib/MCT/aclocal.m4
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/src/!svn/ver/29/trunk/Lib/MCT/Makefile
+END
+install-sh
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/src/!svn/ver/23/trunk/Lib/MCT/install-sh
+END
