@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SVD
+END
+ssvd.f
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SVD/ssvd.f
+END
+dsvd.f
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SVD/dsvd.f
+END
+debug.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SVD/debug.h
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SVD/README
+END
+makefile
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/EXAMPLES/SVD/makefile
+END

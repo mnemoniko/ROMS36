@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/src/!svn/ver/585/trunk/Waves/SWAN/Src
+END
+swancom4.F
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/swancom4.F
+END
+swancom5.F
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/swancom5.F
+END
+mod_xnl4v5.F
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/mod_xnl4v5.F
+END
+ocpmix.F
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/ocpmix.F
+END
+serv_xnl4v5.F
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/serv_xnl4v5.F
+END
+swanpre1.F
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/src/!svn/ver/266/trunk/Waves/SWAN/Src/swanpre1.F
+END
+swanpre2.F
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/swanpre2.F
+END
+swanparll.F
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/swanparll.F
+END
+Module.mk
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/src/!svn/ver/585/trunk/Waves/SWAN/Src/Module.mk
+END
+swmod1.F
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/swmod1.F
+END
+platform.pl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/platform.pl
+END
+swmod2.F
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/swmod2.F
+END
+ocpcre.F
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/ocpcre.F
+END
+swancpp.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/src/!svn/ver/585/trunk/Waves/SWAN/Src/swancpp.h
+END
+swanmain.F
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/src/!svn/ver/266/trunk/Waves/SWAN/Src/swanmain.F
+END
+waves_coupler.F
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/src/!svn/ver/585/trunk/Waves/SWAN/Src/waves_coupler.F
+END
+ocpids.F
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/ocpids.F
+END
+swanout1.F
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/src/!svn/ver/214/trunk/Waves/SWAN/Src/swanout1.F
+END
+swanout2.F
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/swanout2.F
+END
+swanser.F
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/swanser.F
+END
+m_fileio.F
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/m_fileio.F
+END
+swancom1.F
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/swancom1.F
+END
+m_constants.F
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/m_constants.F
+END
+swancom2.F
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/swancom2.F
+END
+swancom3.F
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/src/!svn/ver/172/trunk/Waves/SWAN/Src/swancom3.F
+END

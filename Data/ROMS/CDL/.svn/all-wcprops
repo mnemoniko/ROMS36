@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/src/!svn/ver/607/trunk/Data/ROMS/CDL
+END
+s4dvar_std_b.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/s4dvar_std_b.cdl
+END
+ini_ecosim.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/ini_ecosim.cdl
+END
+clm_ts.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/clm_ts.cdl
+END
+s4dvar_std_f.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/s4dvar_std_f.cdl
+END
+ini_hydro.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/ini_hydro.cdl
+END
+s4dvar_std_i.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/s4dvar_std_i.cdl
+END
+frc_bulk.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/frc_bulk.cdl
+END
+frc_uvstress.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/frc_uvstress.cdl
+END
+s4dvar_std_m.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/s4dvar_std_m.cdl
+END
+adsen.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/adsen.cdl
+END
+bry_limit.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/bry_limit.cdl
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/README
+END
+bry_unlimit.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/bry_unlimit.cdl
+END
+frc_tides.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/frc_tides.cdl
+END
+frc_fluxclm.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/frc_fluxclm.cdl
+END
+frc_rivers.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/frc_rivers.cdl
+END
+s4dvar_obs.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/s4dvar_obs.cdl
+END
+ini_fennel.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/ini_fennel.cdl
+END
+grd_spherical.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/src/!svn/ver/607/trunk/Data/ROMS/CDL/grd_spherical.cdl
+END
+ini_sed.cdl
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/src/!svn/ver/585/trunk/Data/ROMS/CDL/ini_sed.cdl
+END

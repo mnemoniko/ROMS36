@@ -1,0 +1,138 @@
+10
+
+dir
+618
+https://www.myroms.org/svn/src/trunk/ROMS
+https://www.myroms.org/svn/src
+
+
+
+2012-05-17T20:12:51.635643Z
+618
+arango
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+f091316a-d328-0410-a40a-876eff57d070
+
+External
+dir
+
+Include
+dir
+
+Nonlinear
+dir
+
+Functionals
+dir
+
+Version
+file
+
+
+
+
+2012-05-18T16:00:33.000000Z
+4d630b2ae2a8b9465dbd752019f0849d
+2012-05-17T20:12:51.635643Z
+618
+arango
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+362
+
+Adjoint
+dir
+
+SeaIce
+dir
+
+Programs
+dir
+
+Representer
+dir
+
+License_ROMS.txt
+file
+
+
+
+
+2012-03-13T18:37:32.000000Z
+71a6335143344da2261b18a9ad062818
+2012-01-03T18:44:28.100234Z
+585
+arango
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5181
+
+Tangent
+dir
+
+Utility
+dir
+
+Modules
+dir
+
+Bin
+dir
+
+Obsolete
+dir
+
+Drivers
+dir
+

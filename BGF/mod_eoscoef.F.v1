@@ -1,0 +1,114 @@
+#include "cppdefs.h"
+      MODULE mod_eoscoef
+#ifdef NONLIN_EOS
+!
+!svn $Id: mod_eoscoef.F 429 2009-12-20 17:30:26Z arango $
+!================================================== Hernan G. Arango ===
+!  Copyright (c) 2002-2010 The ROMS/TOMS Group                         !
+!    Licensed under a MIT/X style license                              !
+!    See License_ROMS.txt                                              !
+!=======================================================================
+!                                                                      !
+!  Polynomial  expansion  coefficients for the computation of          !
+!  "in situ" density  and other associated quantities via the          !
+!  nonlinear equation of state for seawater  as a function of          !
+!  potential temperature, salinity, and pressure  for Jackett          !
+!  et al. (2006) and McDougall et al. (2003) and the  default          !
+!  Jackett and McDougall, 1992).                                       !
+!                                                                      !
+!=======================================================================
+!
+        USE mod_kinds
+
+        implicit none
+
+# ifdef JM2006_EOS
+
+        real(r16), parameter :: a0  =  9.9984085444849347e+02_r16
+        real(r16), parameter :: a1  =  7.3471625860981584e+00_r16
+        real(r16), parameter :: a2  = -5.3211231792841769e-02_r16
+        real(r16), parameter :: a3  =  3.6492439109814549e-04_r16
+        real(r16), parameter :: a4  =  2.5880571023991390e+00_r16
+        real(r16), parameter :: a5  = -6.7168282786692355e-03_r16
+        real(r16), parameter :: a6  =  1.9203202055760151e-03_r16
+        real(r16), parameter :: a7  =  1.1798263740430364e-02_r16
+        real(r16), parameter :: a8  =  9.8920219266399117e-08_r16
+        real(r16), parameter :: a9  =  4.6996642771754730e-06_r16
+        real(r16), parameter :: a10 = -2.5862187075154352e-08_r16
+        real(r16), parameter :: a11 = -3.2921414007960662e-12_r16
+
+        real(r16), parameter :: two_a2   = 2.0_r16*a2
+        real(r16), parameter :: three_a3 = 3.0_r16*a3
+        real(r16), parameter :: two_a6   = 2.0_r16*a6
+        real(r16), parameter :: two_a8   = 2.0_r16*a8
+        real(r16), parameter :: two_a11  = 2.0_r16*a11
+
+        real(r16), parameter :: b0  =  1.0000000000000000e+00_r16
+        real(r16), parameter :: b1  =  7.2815210113327091e-03_r16
+        real(r16), parameter :: b2  = -4.4787265461983921e-05_r16
+        real(r16), parameter :: b3  =  3.3851002965802430e-07_r16
+        real(r16), parameter :: b4  =  1.3651202389758572e-10_r16
+        real(r16), parameter :: b5  =  1.7632126669040377e-03_r16
+        real(r16), parameter :: b6  = -8.8066583251206474e-06_r16
+        real(r16), parameter :: b7  = -1.8832689434804897e-10_r16
+        real(r16), parameter :: b8  =  5.7463776745432097e-06_r16
+        real(r16), parameter :: b9  =  1.4716275472242334e-09_r16
+        real(r16), parameter :: b10 =  6.7103246285651894e-06_r16
+        real(r16), parameter :: b11 = -2.4461698007024582e-17_r16
+        real(r16), parameter :: b12 = -9.1534417604289062e-18_r16
+!
+        real(r16), parameter :: two_b2    = 2.0_r16*b2
+        real(r16), parameter :: three_b3  = 3.0_r16*b3
+        real(r16), parameter :: four_b4   = 4.0_r16*b4
+        real(r16), parameter :: three_b7  = 3.0_r16*b7
+        real(r16), parameter :: onep5_b8  = 1.5_r16*b8
+        real(r16), parameter :: onep5_b9  = 1.5_r16*b9
+        real(r16), parameter :: two_b9    = 2.0_r16*b9
+        real(r16), parameter :: three_b11 = 3.0_r16*b11
+
+# else
+        real(r8), parameter :: A00 = +1.909256e+04_r8
+        real(r8), parameter :: A01 = +2.098925e+02_r8
+        real(r8), parameter :: A02 = -3.041638e+00_r8
+        real(r8), parameter :: A03 = -1.852732e-03_r8
+        real(r8), parameter :: A04 = -1.361629e-05_r8
+        real(r8), parameter :: B00 = +1.044077e+02_r8
+        real(r8), parameter :: B01 = -6.500517e+00_r8
+        real(r8), parameter :: B02 = +1.553190e-01_r8
+        real(r8), parameter :: B03 = +2.326469e-04_r8
+        real(r8), parameter :: D00 = -5.587545e+00_r8
+        real(r8), parameter :: D01 = +7.390729e-01_r8
+        real(r8), parameter :: D02 = -1.909078e-02_r8
+        real(r8), parameter :: E00 = +4.721788e-01_r8
+        real(r8), parameter :: E01 = +1.028859e-02_r8
+        real(r8), parameter :: E02 = -2.512549e-04_r8
+        real(r8), parameter :: E03 = -5.939910e-07_r8
+        real(r8), parameter :: F00 = -1.571896e-02_r8
+        real(r8), parameter :: F01 = -2.598241e-04_r8
+        real(r8), parameter :: F02 = +7.267926e-06_r8
+        real(r8), parameter :: G00 = +2.042967e-03_r8
+        real(r8), parameter :: G01 = +1.045941e-05_r8
+        real(r8), parameter :: G02 = -5.782165e-10_r8
+        real(r8), parameter :: G03 = +1.296821e-07_r8
+        real(r8), parameter :: H00 = -2.595994e-07_r8
+        real(r8), parameter :: H01 = -1.248266e-09_r8
+        real(r8), parameter :: H02 = -3.508914e-09_r8
+        real(r8), parameter :: Q00 = +9.99842594e+02_r8
+        real(r8), parameter :: Q01 = +6.793952e-02_r8
+        real(r8), parameter :: Q02 = -9.095290e-03_r8
+        real(r8), parameter :: Q03 = +1.001685e-04_r8
+        real(r8), parameter :: Q04 = -1.120083e-06_r8
+        real(r8), parameter :: Q05 = +6.536332e-09_r8
+        real(r8), parameter :: U00 = +8.24493e-01_r8
+        real(r8), parameter :: U01 = -4.08990e-03_r8
+        real(r8), parameter :: U02 = +7.64380e-05_r8
+        real(r8), parameter :: U03 = -8.24670e-07_r8
+        real(r8), parameter :: U04 = +5.38750e-09_r8
+        real(r8), parameter :: V00 = -5.72466e-03_r8
+        real(r8), parameter :: V01 = +1.02270e-04_r8
+        real(r8), parameter :: V02 = -1.65460e-06_r8
+        real(r8), parameter :: W00 = +4.8314e-04_r8
+# endif
+#endif
+
+      END MODULE mod_eoscoef

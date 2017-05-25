@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/src/!svn/ver/540/trunk/Lib/ARPACK
+END
+instruction.arpack
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/instruction.arpack
+END
+instruction.parpack
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/instruction.parpack
+END
+ARmake.inc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/ARmake.inc
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/Makefile
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/README
+END
+readme.arpack
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/readme.arpack
+END
+readme.parpack
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/readme.parpack
+END

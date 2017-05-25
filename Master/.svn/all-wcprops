@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/src/!svn/ver/585/trunk/Master
+END
+master.F
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/src/!svn/ver/585/trunk/Master/master.F
+END
+mct_roms_swan.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/src/!svn/ver/585/trunk/Master/mct_roms_swan.h
+END
+mct_coupler.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/src/!svn/ver/585/trunk/Master/mct_coupler.h
+END
+ocean_coupler.F
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/src/!svn/ver/585/trunk/Master/ocean_coupler.F
+END
+propagator.F
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/src/!svn/ver/585/trunk/Master/propagator.F
+END
+roms_export.F
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/src/!svn/ver/585/trunk/Master/roms_export.F
+END
+mct_roms_wrf.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/src/!svn/ver/585/trunk/Master/mct_roms_wrf.h
+END
+esmf_coupler.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/src/!svn/ver/585/trunk/Master/esmf_coupler.h
+END
+ocean_control.F
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/src/!svn/ver/585/trunk/Master/ocean_control.F
+END
+Module.mk
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/src/!svn/ver/585/trunk/Master/Module.mk
+END
+ocean.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/src/!svn/ver/585/trunk/Master/ocean.h
+END
+esmf_roms.F
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/src/!svn/ver/585/trunk/Master/esmf_roms.F
+END
+roms_import.F
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/src/!svn/ver/585/trunk/Master/roms_import.F
+END

@@ -1,0 +1,108 @@
+/*
+** svn $Id$
+*******************************************************************************
+** Copyright (c) 2002-2009 The ROMS/TOMS Group
+**
+**   Licensed under a MIT/X style license
+**
+**   See License_ROMS.txt
+**
+*******************************************************************************
+**
+**  Options for Ross Sea Model
+*/
+
+#define UV_ADV
+#define DJ_GRADPS
+#define UV_QDRAG
+#define UV_VIS2
+#define UV_COR
+#define TS_DIF2
+#define TS_U3HADVECTION
+#define TS_C4VADVECTION  /* Subject to change */
+#undef  TS_SVADVECTION
+#define T_PASSIVE
+#define SALINITY
+#define NONLIN_EOS
+#undef  JM2006_EOS
+#define SOLVE3D
+#define ANA_SRFLUX
+#define ANA_SPFLUX       /* Passive surface tracer flux...may change */
+#define ANA_BTFLUX
+#define ANA_BSFLUX
+#define ANA_BPFLUX       /* Passive bottom tracer flux...may change */
+#define MIX_S_UV         /* Note: This is different from old Ross */
+#define MIX_GEO_TS
+#define LMD_MIXING
+#define LMD_RIMIX
+#define LMD_CONVEC
+#define LMD_SKPP
+#define LMD_NONLOCAL
+#undef  LMD_BKPP
+#undef  LMD_SHAPIRO
+
+#undef  RADIATION_2D     /* Think about this */
+
+#undef  WEST_PTRADIATION
+#undef  EAST_PTRADIATION
+#undef  NORTH_PTRADIATION  /* Turned off for tides 1/30/2013 */
+
+#define SPLINES
+#define MASKING
+#define TCLIMATOLOGY
+#define TCLM_NUDGING
+
+#define ICE_MODEL
+#ifdef ICE_MODEL
+# undef ICE_SHOREFAST
+# define ICE_THERMO
+#  define ICE_MK
+#  define ICE_ALB_EC92   /* fancier albedo calculation */
+#  define ICE_CONVSNOW  /* turn on later and check later */
+# define ICE_MOMENTUM
+#  define ICE_MOM_BULK
+#  define ICE_EVP
+# define ICE_ADVECT
+#  define ICE_SMOLAR
+#  define ICE_UPWIND
+# undef  ICE_SMOOTH
+# define ANA_HIOBC
+# define ANA_HSNOBC
+#endif
+
+#define BULK_FLUXES
+#ifdef BULK_FLUXES
+# ifdef ICE_MODEL
+#  define ICE_BULK_FLUXES
+# endif
+# define LONGWAVE
+# define EMINUSP
+# define SOLAR_SOURCE
+# define CLOUDS
+#endif
+
+#define STATIONS
+#define ICESHELF
+#define ICESHELF_3EQ
+#define AVERAGES
+#define AVERAGES_FLUXES
+/* #undef  AVERAGES_AKV       removed 2013-03-28 to match ESR */
+/* #undef  AVERAGES_AKT                                       */
+/* #undef  AVERAGES_AKS                                       */
+#define FORWARD_WRITE   /* for 2d volume fluxes...may flush */
+#undef  FILTERED        /* may want to play with this later */
+#undef  FLOATS
+#undef  DIAGNOSTICS_UV
+#define  DIAGNOSTICS_TS
+#undef  CURVGRID        /* not needed here...be careful with wind rotation */
+
+/* Note: Assumes that the tides are pre-rotated to grid directions since we are not using CURVGRID */
+#define ROSS_TIDES
+#ifdef ROSS_TIDES
+# define SSH_TIDES
+# define UV_TIDES
+# define ADD_FSOBC
+# define ADD_M2OBC
+# define RAMP_TIDES
+#endif
+

@@ -1,0 +1,480 @@
+!  Station Extraction Parameters.
+!
+!svn $Id: stations_test_head.in 1169 2010-03-02 01:24:52Z kate $
+!========================================================= Hernan G. Arango ===
+!  Copyright (c) 2002-2010 The ROMS/TOMS Group                                !
+!    Licensed under a MIT/X style license                                     !
+!    See License_ROMS.txt                                                     !
+!==============================================================================
+!                                                                             !
+! Input parameters can be entered in ANY order, provided that the parameter   !
+! KEYWORD (usually, upper case) is typed correctly followed by "="  or "=="   !
+! symbols. Any comment lines are allowed and must begin with an exclamation   !
+! mark (!) in column one.  Comments may  appear to the right of a parameter   !
+! specification to improve documentation.  Comments will be ignored  during   !
+! reading.  Blank lines are also allowed and ignored. Continuation lines in   !
+! a parameter specification are allowed and must be preceded by a backslash   !
+! (\).  In some instances, more than one value is required for a parameter.   !
+! If fewer values are provided, the  last value  is assigned for the entire   !
+! parameter array.  The multiplication symbol (*),  without blank spaces in   !
+! between, is allowed for a parameter specification.  For example, in a two   !
+! grids nested application:                                                   !
+!                                                                             !
+!    AKT_BAK == 2*1.0d-6  2*5.0d-6              ! m2/s                        !
+!                                                                             !
+! indicates that the first two entries of array AKT_BAK,  in fortran column-  !
+! major order, will have the same value of "1.0d-6" for grid 1,  whereas the  !
+! next two entries will have the same value of "5.0d-6" for grid 2.           !
+!                                                                             !
+! In multiple levels of nesting and/or multiple connected domains  step-ups,  !
+! "Ngrids" entries are expected for some of these parameters.  In such case,  !
+! the order of the entries for a parameter is extremely important.  It  must  !
+! follow the same order (1:Ngrids) as in the state variable declaration. The  !
+! USER may follow the above guidelines for specifying his/her values.  These  !
+! parameters are marked by "==" plural symbol after the KEYWORD.              !
+!                                                                             !
+!==============================================================================
+!
+! Switch to control the writing of stations data within nested and/or multiple
+! connected grids, [1:Ngrids].
+
+   Lstations == T
+
+! Logical switches (TRUE/FALSE) to activate writing of fields in STATION
+! output file, [Sout(:,ng), ng=1, Ngrids].
+
+Sout(idUvel) == T                          ! 3D U-velocity
+Sout(idVvel) == T                          ! 3D V-velocity
+Sout(idWvel) == T                          ! 3D W-velocity
+Sout(idu3dE) == F
+Sout(idv3dN) == F
+Sout(idOvel) == T                          ! 3D omega vertical velocity
+Sout(idUbar) == T                          ! 2D U-velocity
+Sout(idVbar) == T                          ! 2D V-velocity
+Sout(idu2dE) == F
+Sout(idv2dN) == F
+Sout(idFsur) == T                          ! free-surface
+Sout(idBath) == T                          ! time-dependent bathymetry
+
+Sout(idTvar) == T T T                      ! all (NT) tracers
+
+Sout(idPair) == F
+Sout(idUair) == F
+Sout(idVair) == F
+Sout(idUsms) == T                          ! surface U-stress
+Sout(idVsms) == T                          ! surface V-stress
+Sout(idUbms) == F                          ! bottom U-stress
+Sout(idVbms) == F                          ! bottom V-stress
+
+Sout(idUairE)== F
+Sout(idVairN)== F
+
+Sout(idUbrs) == F                          ! bottom U-current stress
+Sout(idVbrs) == F                          ! bottom V-current stress
+Sout(idUbws) == F                          ! bottom U-wave stress
+Sout(idVbws) == F                          ! bottom V-wave stress
+Sout(idUbcs) == F                          ! bottom max wave-current U-stress
+Sout(idVbcs) == F                          ! bottom max wave-current V-stress
+
+Sout(idUbot) == F                          ! bed wave orbital U-velocity
+Sout(idVbot) == F                          ! bed wave orbital V-velocity
+Sout(idUbur) == F                          ! bottom U-velocity above bed
+Sout(idVbvr) == F                          ! bottom V-velocity above bed
+
+Sout(idW2xx) == F                          ! 2D radiation stress, Sxx component
+Sout(idW2xy) == F                          ! 2D radiation stress, Sxy component
+Sout(idW2yy) == F                          ! 2D radiation stress, Syy component
+Sout(idU2rs) == F                          ! 2D radiation U-stress
+Sout(idV2rs) == F                          ! 2D radiation V-stress
+Sout(idU2Sd) == F                          ! 2D U-Stokes velocity
+Sout(idV2Sd) == F                          ! 2D V-Stokes velocity
+
+Sout(idW3xx) == F                          ! 3D radiation stress, Sxx component
+Sout(idW3xy) == F                          ! 3D radiation stress, Sxy component
+Sout(idW3yy) == F                          ! 3D radiation stress, Syy component
+Sout(idW3zx) == F                          ! 3D radiation stress, Szx component
+Sout(idW3zy) == F                          ! 3D radiation stress, Szy component
+Sout(idU3rs) == F                          ! 3D U-radiation stress
+Sout(idV3rs) == F                          ! 3D V-radiation stress
+Sout(idU3Sd) == F                          ! 3D U-Stokes velocity
+Sout(idV3Sd) == F                          ! 3D V-Stokes velocity
+
+Sout(idWamp) == F                          ! wave height
+Sout(idWlen) == F                          ! wave length
+Sout(idWdir) == F                          ! wave direction
+Sout(idWptp) == F                          ! wave surface period
+Sout(idWpbt) == F                          ! wave bottom period
+Sout(idWorb) == F                          ! wave bottom orbital velocity
+Sout(idWdis) == F                          ! wave dissipation
+
+Sout(idTsur) == F F                        ! surface net heat and salt flux
+Sout(idLhea) == F                          ! latent heat flux
+Sout(idShea) == F                          ! sensible heat flux
+Sout(idLrad) == F                          ! longwave radiation flux
+Sout(idSrad) == F                          ! shortwave radiation flux
+Sout(idEmPf) == F                          ! E-P flux
+Sout(idevap) == F                          ! evaporation rate
+Sout(idrain) == F                          ! precipitation rate
+
+Sout(idDano) == T                          ! density anomaly
+Sout(idSSSf) == F
+Sout(idVvis) == F                          ! vertical viscosity
+Sout(idTdif) == F                          ! vertical T-diffusion
+Sout(idSdif) == F                          ! vertical Salinity diffusion
+Sout(idHsbl) == T                          ! depth of surface boundary layer
+Sout(idHbbl) == F                          ! depth of bottom boundary layer
+Sout(idMtke) == F                          ! turbulent kinetic energy
+Sout(idMtls) == F                          ! turbulent length scale
+
+Sout(idUice)   == T                        ! ice 2D momentum component (m/s) in the XI-direction.
+Sout(idVice)   == T                        ! ice 2D momentum component (m/s) in the ETA-direction.
+Sout(idUiceE)  == F
+Sout(idViceN)  == F
+Sout(idAice)   == T                        ! ice concentration
+Sout(idHice)   == T                        ! ice average thickness
+Sout(idHsno)   == T                        ! snow average thickness
+Sout(idSfwat)  == T                        ! surface water thickness (on ice)
+Sout(idAgeice) == T                        ! ice age.
+Sout(idIomflx) == T                        ! ice-ocean mass flux
+Sout(idTice)   == T                        ! ice/snow surface temperature
+Sout(idTimid)  == T                        ! ice interior temperature
+Sout(idTauiw)  == T                        ! ice-water friction velocity
+Sout(idChuiw)  == T                        ! ice-water momentum transfer coefficient
+Sout(idT0mk)   == T                        ! under-ice temperature
+Sout(idS0mk)   == T                        ! under-ice salinity
+Sout(idWfr)    == T                        ! frazil ice growth rate
+Sout(idWai)    == T                        ! ice growth/melt rate
+Sout(idWao)    == T                        ! ice growth/melt rate
+Sout(idWio)    == T                        ! ice growth/melt rate
+Sout(idWro)    == T                        ! ice melt runoff rate
+Sout(idSig11)  == T                        ! internal ice stress sig11
+Sout(idSig12)  == T                        ! internal ice stress sig12
+Sout(idSig22)  == T                        ! internal ice stress sig22
+Sout(idWfr)    == T                        ! freezing water wfr
+
+
+! Logical switches (TRUE/FALSE) to activate writing of exposed sediment
+! layer properties into STATIONS output file.  Currently, MBOTP properties
+! are expected for the bottom boundary layer and/or sediment models:
+!
+!   Sout(idBott(isd50)),  isd50 = 1        ! mean grain diameter
+!   Sout(idBott(idens)),  idens = 2        ! mean grain density
+!   Sout(idBott(iwsed)),  iwsed = 3        ! mean settling velocity
+!   Sout(idBott(itauc)),  itauc = 4        ! critical erosion stress
+!   Sout(idBott(irlen)),  irlen = 5        ! ripple length
+!   Sout(idBott(irhgt)),  irhgt = 6        ! ripple height
+!   Sout(idBott(ibwav)),  ibwav = 7        ! wave excursion amplitude
+!   Sout(idBott(izdef)),  izdef = 8        ! default bottom roughness
+!   Sout(idBott(izapp)),  izapp = 9        ! apparent bottom roughness
+!   Sout(idBott(izNik)),  izNik = 10       ! Nikuradse bottom roughness
+!   Sout(idBott(izbio)),  izbio = 11       ! biological bottom roughness
+!   Sout(idBott(izbfm)),  izbfm = 12       ! bed form bottom roughness
+!   Sout(idBott(izbld)),  izbld = 13       ! bed load bottom roughness
+!   Sout(idBott(izwbl)),  izwbl = 14       ! wave bottom roughness
+!   Sout(idBott(iactv)),  iactv = 15       ! active layer thickness
+!   Sout(idBott(ishgt)),  ishgt = 16       ! saltation height
+!
+!                                 1 1 1 1 1 1 1
+!               1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6
+
+Sout(idBott) == T T T T T T T T T T T T T T T T
+
+! Number of stations to process in each nested grid.  These values are
+! essential because the station arrays are dynamically allocated using
+! these values, [1:Ngrids].
+
+    NSTATION ==  117
+
+! Station locations for all grids in any desired order.  The horizontal
+! location for a particular station may be specified in terms of fractional
+! (I,J) grid pairs (FLAG=0) or (longitude,latitude) grid pairs (FLAG=1).
+! Here, FLAG is a special switch and may be used for multiple purposes.
+! The GRID column indicates nested grid number to process. This value must
+! be one in non-nested applications.  The COMMENT section is ignored during
+! reading and may be used to help documentation.
+
+POS =  GRID  FLAG      X-POS       Y-POS     COMMENT
+
+	1       1	200.980 	-72.182	! Stations update to PRISM
+	1	1	194.900 	-73.379	! CTD stations (2-118) as
+	1	1	189.990 	-75.003	! found on the PRISM webpage
+	1	1	184.050 	-75.726	! Set as lat/lon coordinates
+	1	1	184.660 	-75.884	! 2013-11-26, SM
+	1	1	184.800 	-76.352	!
+	1	1	168.780		-76.666	!
+	1	1	171.500		-76.666	
+	1	1	174.250		-76.666	! Station 10
+	1	1	170.470		-76.730	
+	1	1	170.190		-76.730	
+	1	1	169.890		-76.730	
+	1	1	170.770		-76.730	
+	1	1	171.060		-76.730	
+	1	1	170.470		-76.861	
+	1	1	170.470		-76.796	
+	1	1	170.470		-76.663	
+	1	1	170.480		-76.596	
+	1	1	172.880		-76.735	! Station 20
+	1	1	172.570		-76.732	
+	1	1	172.270		-76.742	
+	1	1	174.250		-76.533	
+	1	1	174.250		-76.600	
+	1	1	174.250		-76.666	
+	1	1	174.250		-76.734	
+	1	1	174.250		-76.800	
+	1	1	170.330		-76.814	
+	1	1	170.330		-76.746	
+	1	1	170.330		-76.680	! Station 30
+	1	1	170.330		-76.613	
+	1	1	170.330		-76.549	
+	1	1	169.750		-76.679	
+	1	1	170.040		-76.681	
+	1	1	170.620		-76.680	
+	1	1	170.910		-76.680	
+	1	1	180.080 	-76.905	
+	1	1	179.660		-76.810	
+	1	1	179.250		-76.716	
+	1	1	178.830		-76.623	! Station 40
+	1	1	178.430		-76.530	
+	1	1	179.250		-76.660	
+	1	1	178.030		-76.434	
+	1	1	177.620		-76.339	
+	1	1	179.250		-76.317	
+	1	1	179.250		-76.451	
+	1	1	179.250		-76.583	
+	1	1	179.250		-76.716	
+	1	1	179.250		-76.850	
+	1	1	179.250		-76.985	! Station 50
+	1	1	180.410 	-76.717	
+	1	1	179.830		-76.717	
+	1	1	179.250		-76.719	
+	1	1	178.670		-76.716	
+	1	1	178.080		-76.718	
+	1	1	177.500		-76.716	
+	1	1	176.920		-76.716	
+	1	1	181.200 	-77.433	
+	1	1	181.190 	-77.599	
+	1	1	181.200 	-77.796	! Station 60
+	1	1	180.380 	-77.756	
+	1	1	179.550		-77.764	
+	1	1	178.720		-77.749	
+	1	1	177.810		-77.747	
+	1	1	179.190		-77.610	
+	1	1	179.000		-77.608	
+	1	1	178.800		-77.607	
+	1	1	178.400		-77.608	
+	1	1	178.000		-77.608	
+	1	1	178.790		-77.707	! Station 70
+	1	1	178.800		-77.656	
+	1	1	178.800		-77.556	
+	1	1	178.800		-77.506	
+	1	1	180.080 	-76.905	
+	1	1	179.650		-76.810	
+	1	1	179.250		-76.716	
+	1	1	178.840		-76.623	
+	1	1	178.430		-76.529	
+	1	1	178.030		-76.434	
+	1	1	177.620		-76.338	! Station 80
+	1	1	179.000		-74.000	
+	1	1	178.320		-73.832	
+	1	1	177.660		-73.667	
+	1	1	176.980		-73.501	
+	1	1	176.320		-73.336	
+	1	1	175.670		-73.170	
+	1	1	175.000		-73.001	
+	1	1	173.500		-73.501	
+	1	1	174.150		-73.668	
+	1	1	174.820		-73.838	! Station 90
+	1	1	175.490		-74.004	
+	1	1	176.160		-74.172	
+	1	1	176.840		-74.342	
+	1	1	177.500		-74.501	
+	1	1	174.250		-76.669	
+	1	1	171.140		-76.666	
+	1	1	167.690		-76.638	
+	1	1	169.010		-76.767	
+	1	1	169.440		-76.766	
+	1	1	169.000		-76.866	! Station 100
+	1	1	168.560		-76.766	
+	1	1	169.000		-76.667	
+	1	1	168.240		-76.175	
+	1	1	169.000		-76.267	
+	1	1	169.000		-76.367	
+	1	1	169.000		-76.468	
+	1	1	169.000		-76.567	
+	1	1	169.000		-76.967	
+	1	1	169.000		-77.068	
+	1	1	169.000		-77.167	! Station 110
+	1	1	168.330		-77.167	
+	1	1	170.000		-77.167	
+	1	1	170.000		-77.067	
+	1	1	170.000		-76.966	
+	1	1	169.300		-76.841	
+	1	1	166.760		-76.753	
+	1	1	165.440		-76.758	
+	1	1	164.250		-76.750	! Station 118
+
+
+!
+!  GLOSSARY:
+!  =========
+!
+!  This input file provides the positions of stations data to be extracted
+!  and written into STATIONS output file.  This file is use to monitor model
+!  fields at frequent time intervals.  It is also used to sample the model at
+!  observation locations in order to build the penalty function used in
+!  variational data assimilation.
+!
+!------------------------------------------------------------------------------
+! Control Switch.
+!------------------------------------------------------------------------------
+!
+! Lstations      Switch to control the writing of station data within nested
+!                  and/or multiple connected grids. Ngrid values are expected.
+!                  By default this switch is set to TRUE in "mod_scalars" for
+!                  all grids when the CPP option STATIONS is activated.  The
+!                  USER can control which grid to process by turning on/off
+!                  this switch.
+!
+!------------------------------------------------------------------------------
+! Logical switches (TRUE/FALSE) to activate writing of fields in STATIONS
+! output file.  Except for tracer type variables, Ngrids values are expected
+! for all switches.
+!------------------------------------------------------------------------------
+!
+!  Sout(idUvel)  Write out 3D U-velocity component.
+!  Sout(idVvel)  Write out 3D V-velocity component.
+!  Sout(idWvel)  Write out 3D W-velocity component.
+!  Sout(idOvel)  Write out 3D omega vertical velocity.
+!  Sout(idUbar)  Write out 2D U-velocity component.
+!  Sout(idVbar)  Write out 2D V-velocity component.
+!  Sout(idFsur)  Write out free-surface.
+!  Sout(idBath)  Write out time-dependent bathymetry.
+!
+!  Sout(idTvar)  Write out tracer type variables,  (NT,Ngrids) values are
+!                  Expected.
+!
+!  Sout(idUsms)  Write out surface U-momentum stress.
+!  Sout(idVsms)  Write out surface V-momentum stress.
+!  Sout(idUbms)  Write out bottom  U-momentum stress.
+!  Sout(idVbms)  Write out bottom  V-momentum stress.
+!
+!  Sout(idUbrs)  Write out current-induced, U-momentum stress.
+!  Sout(idVbrs)  Write out current-induced, V-momentum stress.
+!  Sout(idUbws)  Write out wind-induced, bottom U-wave stress.
+!  Sout(idVbws)  Write out wind-induced, bottom V-wave stress.
+!  Sout(idUbcs)  Write out bottom maximum wave and current U-stress.
+!  Sout(idVbcs)  Write out bottom maximum wave and current V-stress.
+!
+!  Sout(idUbot)  Write out wind-induced, bed wave orbital U-velocity.
+!  Sout(idVbot)  Write out wind-induced, bed wave orbital V-velocity.
+!  Sout(idUbur)  Write out bottom U-velocity above bed.
+!  Sout(idVbvr)  Write out bottom V-velocity above bed.
+!
+!  Sout(idW2xx)  Write out 2D radiation stress, Sxx component.
+!  Sout(idW2xy)  Write out 2D radiation stress, Sxy component.
+!  Sout(idW2yy)  Write out 2D radiation stress, Syy component.
+!  Sout(idU2rs)  Write out 2D U-radiation stress.
+!  Sout(idV2rs)  Write out 2D V-radiation stress.
+!  Sout(idU2Sd)  Write out 2D U-Stokes velocity.
+!  Sout(idV2Sd)  Write out 2D V-Stokes velocity.
+!
+!  Sout(idW3xx)  Write out 3D radiation stress, Sxx component.
+!  Sout(idW3xy)  Write out 3D radiation stress, Sxy component.
+!  Sout(idW3yy)  Write out 3D radiation stress, Syy component.
+!  Sout(idW3zx)  Write out 3D radiation stress, Szx component.
+!  Sout(idW3zy)  Write out 3D radiation stress, Szy component.
+!  Sout(idU3rs)  Write out 3D U-radiation stress.
+!  Sout(idV3rs)  Write out 3D V-radiation stress.
+!  Sout(idU3Sd)  Write out 3D U-Stokes velocity.
+!  Sout(idV3Sd)  Write out 3D V-Stokes velocity.
+!
+!  Sout(idWamp)  Write out wave height.
+!  Sout(idWlen)  Write out wave length.
+!  Sout(idWdir)  Write out wave direction.
+!  Sout(idWptp)  Write out wave surface period.
+!  Sout(idWpbt)  Write out wave bottom period.
+!  Sout(idWorb)  Write out wave bottom orbital velocity.
+!  Sout(idWdis)  Write out wave dissipation.
+!
+!  Sout(idTsur)  Write out surface net heat and salt flux.
+!  Sout(idLhea)  Write out latent heat flux.
+!  Sout(idShea)  Write out sensible heat flux.
+!  Sout(idLrad)  Write out long-wave radiation flux.
+!  Sout(idSrad)  Write out short-wave radiation flux.
+!  Sout(idEmPf)  Write out E-P flux.
+!  Sout(idevap)  Write out evaporation rate.
+!  Sout(idrain)  Write out precipitation rate.
+!
+!  Sout(idDano)  Write out density anomaly.
+!  Sout(idVvis)  Write out vertical viscosity coefficient.
+!  Sout(idTdif)  Write out vertical diffusion coefficient of temperature.
+!  Sout(idSdif)  Write out vertical diffusion coefficient of salinity.
+!  Sout(idHsbl)  Write out depth of oceanic surface boundary layer.
+!  Sout(idHbbl)  Write out depth of oceanic bottom boundary layer.
+!  Sout(idMtke)  Write out turbulent kinetic energy.
+!  Sout(idMtls)  Write out turbulent kinetic energy times length scale.
+!
+!  Sout(idBott)  Write out exposed sediment layer properties, 1:MBOTP.
+
+!  Sout(idUice)   Write out ice 2D momentum component (m/s) in the XI-direction.
+!  Sout(idVice)   Write out ice 2D momentum component (m/s) in the ETA-direction.
+!  Sout(idAice)   Write out ice concentration
+!  Sout(idHice)   Write out ice average thickness
+!  Sout(idHsno)   Write out snow average thickness
+!  Sout(idSfwat)  Write out surface water thickness (on ice)
+!  Sout(idAgeice) Write out ice age.
+!  Sout(idIomflx) Write out ice-ocean mass flux
+!  Sout(idTice)   Write out ice/snow surface temperature
+!  Sout(idTimid)  Write out ice interior temperature
+!  Sout(idTauiw)  Write out ice-water friction velocity
+!  Sout(idChuiw)  Write out ice-water momentum transfer coefficient
+!  Sout(idT0mk)   Write out under-ice temperature
+!  Sout(idS0mk)   Write out under-ice salinity
+!  Sout(idWfr)    Write out frazil ice growth rate
+!  Sout(idWai)    Write out ice growth/melt rate
+!  Sout(idWao)    Write out ice growth/melt rate
+!  Sout(idWio)    Write out ice growth/melt rate
+!  Sout(idWro)    Write out ice melt runoff rate
+!  Sout(idSig11)  Write out internal ice stress sig11
+!  Sout(idSig12)  Write out internal ice stress sig12
+!  Sout(idSig22)  Write out internal ice stress sig22
+!  Sout(idWfr)    Write out freezing water wfr
+
+!
+!------------------------------------------------------------------------------
+! Station positions KEYWORDS.
+!------------------------------------------------------------------------------
+!
+!  NSTATION      Number of stations to process in each nested grid. Ngrids
+!                  values are expected.  These values are essential because
+!                  the station arrays are dynamically allocated using these
+!                  values.
+!
+!  POS           Station locations for all grids in any desired order.  The
+!                  horizontal location for a particular station can be
+!                  specified in terms of fractional (I,J) grid pairs (FLAG=0)
+!                  or (longitude,latitude) grid pairs (FLAG=1). Here, FLAG is
+!                  a special switch and may be used for multiple purposes.
+!                  The GRID column indicates nested grid number to process.
+!                  This value must be one in non-nested applications.  The
+!                  COMMENT section is ignored during reading and may be used
+!                  to help documentation.  This locations are used to
+!                  interpolate model data before writting to output STATIONS
+!                  file.  The stations locations are read using the following
+!                  statement:
+!
+!                  is(1:Ngrids)=0
+!                  DO WHILE (.true.)
+!                    read (unit,*,ERR=10) igrid, flag, Xpos, Ypos
+!                    ng=MAX(1,ABS(ng))
+!                    is(ng)=ic(ng)+1
+!                    SCALARS(ng)%Sflag(is(ng))=flag
+!                    SCALARS(ng)%SposX(is(ng))=Xpos
+!                    SCALARS(ng)%SposY(is(ng))=Ypos
+!                  END DO
+!
+!                Since there is no decoding during the reading of the stations
+!                locations, the POS keyword must be the last one to process.
+!                That is, it should be at the end of the input specification.
+!
+!

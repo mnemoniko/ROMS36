@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL
+END
+cvout.f
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL/cvout.f
+END
+dvout.f
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL/dvout.f
+END
+iset.f
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL/iset.f
+END
+ivout.f
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL/ivout.f
+END
+smout.f
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL/smout.f
+END
+second.f
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL/second.f
+END
+zmout.f
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL/zmout.f
+END
+second.t3d
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL/second.t3d
+END
+svout.f
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL/svout.f
+END
+icnteq.f
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL/icnteq.f
+END
+icopy.f
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL/icopy.f
+END
+iswap.f
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL/iswap.f
+END
+cmout.f
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL/cmout.f
+END
+zvout.f
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL/zvout.f
+END
+dmout.f
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL/dmout.f
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/src/!svn/ver/23/trunk/Lib/ARPACK/UTIL/Makefile
+END
