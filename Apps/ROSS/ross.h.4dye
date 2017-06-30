@@ -18,8 +18,7 @@
 #define UV_VIS2
 #define UV_COR
 #define TS_DIF2
-#define TS_C4HADVECTION /* Turn on centered 4th order tracer horiz adv. SM 2017/06/30 */
-#undef TS_U3HADVECTION
+#define TS_U3HADVECTION
 #define TS_C4VADVECTION  /* Subject to change */
 #undef  TS_SVADVECTION
 #define T_PASSIVE
@@ -39,7 +38,7 @@
 #define LMD_CONVEC
 #define LMD_SKPP
 #define LMD_NONLOCAL
-#undef  LMD_BKPP
+#undef  LMD_BKPP /* Bottom boundary layer on/off */
 #undef  LMD_SHAPIRO
 
 #undef  RADIATION_2D     /* Think about this */
@@ -107,3 +106,6 @@
 # define RAMP_TIDES
 #endif
 
+/* Definitions for dye_04 - benthic iron */
+#define TCLM_NUDGING
+#define TCLIMATOLOGY

@@ -1,0 +1,118 @@
+001 - Basic Ross Sea case as obtained from Mike Dinniman June 2012.  Includes ice shelves, sea ice (Budgell), and 3 dye tracers (CDW, ice shelf melt water, sea ice melt water).  Runs off a 6 year spin up where model day 2190 = 9/15/2010.  Last model day is 2/28/2012.  This time period corresponds with the PRISM cruise.  5-day outputs. Files deleted 2/26/2013.
+
+002 - Partly corrupted 12 hour (?) output run - kuroshio went down during data transfer and ross_his_0290.nc was corrupted and lost.  Files deleted b/c better ones in 003.
+
+003 - Completed 12 hour output run with avg, his, and dia files all present.  First half of files deleted. 2013-07-08 All deleted (unused) 2015-01-22.
+
+004 - First try running the base Ross Sea case on ROMS v3.6.  Sea ice variables were not recorded in output file because there are issues with the sea ice code obtained from Kate.  Also, dye02 (sea ice melt) is zero everywhere all the time.  Something is not right.  Files deleted. 1/23/2013
+
+005 - 1 month run (30 days) as a test after fixing some of the sea ice files and fixing the output problem.  Files deleted. 1/23/2013
+
+006 - Same as 005, but output every day, not every 3 days. Files deleted 2/25/2013
+
+007 - Same as 005, but output every 12 hours. Files deleted 2/25/2013
+
+008 - Fixed places I missed with ifdef ROSS.  12 hour output.  Files deleted 1/31/2013.
+
+009 - Changed uice, vice b.c.s  12 hour output. Files deleted 2/21/2013
+
+010 - Added bcs for passive tracers under LBC(isTvar) in *.in file 12 hr output. Files deleted 2/26/2013
+
+011 - Full model run with 1 day output. Files deleted 2/28/2013.
+
+012 - Full model run with 1 day output (fixed sea ice?) NO.  Files deleted 2013-03-21.
+
+013 - "" with fixed sfwat_max input in ice.in.  Looks good to me.
+
+014 - Run of v3.3, with tides, for 2001-2003, 4 dyes, using tidal forcing from Susan.  Files deleted 2013-06-06
+
+015 - v3.6, 2001-2003, with tides, 4 dyes.  Same as 014, updated version.  Files deleted 2013-06-06
+
+016 - v3.3, with tides, for 2001-2003, 4 dyes, fixed compiler? error (optimization changed from o3 to o2).  No longer need v3.3 runs - Deleted 2015-05-27
+
+017 - v3.6, with tides, 2001-2003, 4 dyes, fixed same error as 016 and updated ice bc's to Mixed. Files deleted 2013-06-24
+
+018 - v3.6, tides w/ nodal corrections, PRISM run, 5 day output, includes 4 hour output over PRISM cruise time.  5 day output deleted 2013-07-17 to make room for 1 day output (021) All deleted 2015-01-22.
+
+019 - v3.6, rerun of 017 with i2d_bc.F updated on ALL boundaries this time.  Had to restart model run a little over a year in due to an instability (model blew up) in velocity in layers 2 & 3 at i=7, j=293.
+
+020 - v3.6, PRISM run w/o tides, 1 day output, using updated code from running with tides. Files deleted 2013-09-18 to make room for 022.
+
+021 - v3.6, PRISM w/ tides, 1 day output, deleted 2013-10-22 to make room for 023
+
+022 - v3.6, PRISM run w/o tides, 1 day output, diagnostics ON, fixed problem w/ mod_ncparam.F.  Re-ran to get more diagnostics output. Fixed IS version in 101 - Deleted to make room 2015-01-22.
+
+023 - v3.6, PRISM run w/ tides, 1 day output, diagnostics ON.  Re-ran to get more diagnostics output. Keep as version publish in Iron Budget paper. (re-run in 102).  Deleted/corrupted 2014-12-1.
+
+Mikes run - Not stored here, run w/ tides w/ BBL turned on
+
+024 - Series of tests of 1.5km version to get timing. (diagnostics OFF)
+      024_1 - Run length: 5 weeks;  Output: 4 hourly;  Time: 4705 min = 34 days RT/ 1 yr MT
+      024_2 - Run length: 5 weeks;  Output: 1 daily;   Time: 4190 min = 30 days RT/ 1 yr MT
+      024_3 - Run length: 5 weeks;  Output: 5 daily;   Time: 3915 min = 28 days RT/ 1 yr MT
+Deleted 2015-01-22 Output not needed.
+
+025 - v3.6, PRISM run w/ tides, 1 day output, diagnostics ON, includes 4 hourly output over PRISM time and stations match lat/lon coordinates of actual PRISM stations.  Includes correction to minor error in ice shelf melt calculation found by Rachael Mueller. And I forgot and left the bottom KPP layer turned on. Not used and probably corrupted - deleted to make space 2014-12-18.
+
+026 - same as 025, but without tides.  And without the 4 hourly output over PRISM time, at least for now. And without bottom KPP. Deleted/corrputed 2014-12-1.
+
+027 - Same as 025, but without the bottom KPP layer turned on. (re-run in 101) Deleted/corrputed 2014-12-1.
+
+028 - Model drift run. Constant forcing based on the first month (September).  Monthly forcing was repeated, higher frequency forcing was averaged over the first month, then repeated monthly. Running for 10 years, 10 day output, no tides (obv.). Files corrupted - Deleted 2015-05-27
+
+031 - 1.5km run on kara.  Testing until it runs past the first several days.  Still need to fix CDW initial values and station locations for PRISM.  Not needed - deleted 2014-12-18.
+
+032 - 1.5km run on turing.  200 cores.  Has same issues as 031.  Use to analyze output for large problems. Deleted 2014-12-18.  (Better re-run in 036)
+
+033 - 5km run with tides on kara (copy of 101) with floats for Kohut et al project. Diagnostics turned off for speed, 1 day output. Only keep flt/sta files
+
+034 - 1.5km run with tides on turing. 300 cores.  Fixed stations and CDW initial data since 032.  5 day output, no diagnostics. Deleted 2015-01-12 - better re-run in 037.
+
+035 - 5km run w/o tides on kara (re-run of 026 that was found to be partly corrupted). Daily output, including TS diagnostics for T,S,CDW.
+
+036 - 1.5km run w/o tides on turing, 300 cores.  1 day output with diagnostics. Left sta and rst file on turing (too large)
+
+037 - 1.5km run w/ tides on turing, 300 cores. 1 day output w/ diagnostics.
+
+038 - 5km run w/ tides on turing, 100 cores.  Re-run with floats for joint proposal w/ Walker.  floats_ross_proposal.in  Only keeping float output file. And then run again kara as a replica of run 101 for floats file.
+
+039 - 1.5km run w/o tides on turing, 300 cores.  5 day output.  Direct interpolation from 5km files - check what differences new grid/bathy makes.
+
+040 - 5km 10 year run, repeat of year 1, to test model drift.  Kara, 60 cores (at least). Bad Tair.  Deleted 2015-06-04
+
+041 - 5km no tides run. Bathy re-interp'd from 1.5km.  100 cores on Turing. Deleted 2015-06-01 (bad zice)
+
+042 - 5km tides run, 100 cores on turing, same as 041. Deleted 2015-06-01 (bad zice)
+
+043 - 5km drift run on turing, 100 cores.  Same as 040, fixed Tair, running 20 years.  NO, did not fix Tair completely - Deleted 2015-06-02.
+
+044 - 5km no tides run, Bathy interp'd from 1.5km (Re-run of 041 that had bad zice). 100 cores on Turing
+
+045 - 5km tides run, same as 044 (re-run of 042 w/ zice error)
+
+046 - 5km drift run on turing, 100 cores. Same as 043, really fixed Tair this time, 20 year run.
+
+047 - 5km tides run, 100 cores, Turing - Error discovered in tidal forcing files! (re-run of 045
+
+048 - 1.5km tides run, 400 cores, Turing - Error in tidal forcing fixed (re-run of 037)
+
+049 - 5km no tides run, 100 cores, Turing.  Bottom kpp turned on and dye_04 (benthic dFe) added. - Deleted 2015-09-16
+
+050 - 5km no tides run, 100 cores, Turing.  Same as 049, but dye modified to only reset at climatological values greater than 0.
+
+051 - 5km tides run, 100 cores, Turing. Same as 050, but with tides added (as in 044 vs. 047)
+
+052 - 1.5km no tides run, 300 cores, Turing.  Same base as 050.
+
+053 - 1.5km tides run, 400 cores, Turing.  Same base as 050.
+
+054 - re-run of 046, but with updated grid file and dye_04 added.
+
+055 - re-run of 046/054.  046 used the wrong grid! (Old 5km) So, re-running 054 with new 5km grid, but with bottom kpp turned off.
+
+056 - re-run of 044. Advection scheme changed from 3rd order upwind to 4th order centered.
+
+101 - Re-run of PRISM run with tides, Includes update from log10 to log in IS melt calculation.  Repeat of run 027 (lost)
+
+102 - Re-run of PRISM with tides, does not include IS melt calc update.  Version used in Iron budget paper.  Repeate of run 023 (lost)
+
