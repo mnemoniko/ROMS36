@@ -4,3 +4,6 @@ Build/*
 oceanM
 oceanG
 *~
+#*#
+makefile*
+.svn
