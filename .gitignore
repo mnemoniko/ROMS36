@@ -1,0 +1,9 @@
+*.qsub
+*.out
+Build/*
+oceanM
+oceanG
+*~
+#*#
+makefile*
+.svn
