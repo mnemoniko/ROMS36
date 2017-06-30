@@ -1,0 +1,6 @@
+*.qsub
+*.out
+Build/*
+oceanM
+oceanG
+*~
