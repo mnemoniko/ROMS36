@@ -18,8 +18,8 @@
 #define UV_VIS2
 #define UV_COR
 #define TS_DIF2
-#define TS_C4HADVECTION /* Turn on centered 4th order tracer horiz adv. SM 2017/06/30 */
-#undef TS_U3HADVECTION
+#undef TS_C4HADVECTION /* Turn off centered 4th order tracer horiz adv. SM 2017/07/03 */
+#define TS_U3HADVECTION
 #define TS_C4VADVECTION  /* Subject to change */
 #undef  TS_SVADVECTION
 #define T_PASSIVE
