@@ -1,6 +1,6 @@
 *.qsub
 *.out
-Build/*
+Build*
 oceanM
 oceanG
 *~

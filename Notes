@@ -112,6 +112,12 @@ Deleted 2015-01-22 Output not needed.
 
 056 - re-run of 044. Advection scheme changed from 3rd order upwind to 4th order centered.
 
+057 - re-run of 044. Laplacian diffusivity changed to 1.0
+
+058 - re-run of 044. Laplacian diffusivity changed to 10.0
+
+059 - re-run of 044. Laplacian diffusivity changed to 30.0
+
 101 - Re-run of PRISM run with tides, Includes update from log10 to log in IS melt calculation.  Repeat of run 027 (lost)
 
 102 - Re-run of PRISM with tides, does not include IS melt calc update.  Version used in Iron budget paper.  Repeate of run 023 (lost)
