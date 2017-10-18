@@ -47,7 +47,7 @@
 ! Input variable information file name.  This file needs to be processed
 ! first so all information arrays can be initialized properly.
 
-     VARNAME = Apps/ROSS/varinfo_ROSS.dat
+     VARNAME = Apps/ROSSsmall/varinfo_ROSS.dat
 
 ! Number of nested grids.
 
@@ -56,8 +56,8 @@
 ! Grid dimension parameters. See notes below in the Glossary for how to set
 ! these parameters correctly.
 
-          Lm == 277           ! Number of I-direction INTERIOR RHO-points
-          Mm == 368           ! Number of J-direction INTERIOR RHO-points
+          Lm == 928           ! Number of I-direction INTERIOR RHO-points
+          Mm == 1231           ! Number of J-direction INTERIOR RHO-points
            N == 24            ! Number of vertical levels
 
         Nbed =  0             ! Number of sediment bed layers
@@ -71,8 +71,8 @@
 ! shared-memory configurations used to determine tile horizontal range
 ! indices (Istr,Iend) and (Jstr,Jend), [1:Ngrids].
 
-      NtileI == 10                               ! I-direction partition
-      NtileJ == 10                               ! J-direction partition
+      NtileI == 16                               ! I-direction partition
+      NtileJ == 16                               ! J-direction partition
 
 ! Set lateral boundary conditions keyword. Notice that a value is expected
 ! for each boundary segment per nested grid for each state variable.
@@ -110,8 +110,8 @@
 !                   1       2       3       4
 
    LBC(isFsur) ==   Gra     Clo     Gra     Gra         ! free-surface
-   LBC(isUbar) ==   RadNud  Clo     RadNud  RadNud         ! 2D U-momentum
-   LBC(isVbar) ==   RadNud  Clo     RadNud  RadNud         ! 2D V-momentum
+   LBC(isUbar) ==   RadNud  Clo     RadNud  RadNud      ! 2D U-momentum
+   LBC(isVbar) ==   RadNud  Clo     RadNud  RadNud      ! 2D V-momentum
    LBC(isUvel) ==   Rad     Clo     Rad     Rad         ! 3D U-momentum
    LBC(isVvel) ==   Rad     Clo     Rad     Rad         ! 3D V-momentum
    LBC(isMtke) ==   Gra     Clo     Gra     Gra         ! mixing TKE
@@ -165,8 +165,8 @@ ad_VolCons(north) ==  T                            ! northern boundary
 
 ! Time-Stepping parameters.
 
-      NTIMES == 783360         !End time = 783360, rst time = 630720
-          DT == 300.0d0
+      NTIMES == 2350080              
+          DT == 100.0d0
      NDTFAST == 30
 
 ! Model iteration loops parameters.
@@ -187,23 +187,23 @@ ad_VolCons(north) ==  T                            ! northern boundary
 ! Input/Output parameters.
 
        NRREC == 2
-   LcycleRST == T
-        NRST == 1440
-        NSTA == 6
-        NFLT == 12
+   LcycleRST == F
+        NRST == 25920
+        NSTA == 9
+        NFLT == 9
        NINFO == 1
 
 ! Output history, average, diagnostic files parameters.
 
      LDEFOUT == T
-        NHIS == 288                             !1440
-     NDEFHIS == 4320                            !23040
+        NHIS == 864   !4320                             !2160 
+     NDEFHIS == 12960                           !12960   !34560
       NTSAVG == 1
-        NAVG == 288                             !1440
-     NDEFAVG == 4320                            !23040
+        NAVG == 864
+     NDEFAVG == 12960                                    !34560
       NTSDIA == 1
-        NDIA == 288                             !1440
-     NDEFDIA == 4320                            !11520
+        NDIA == 864 
+     NDEFDIA == 12960                                    !17280
 
 ! Output tangent linear and adjoint models parameters.
 
@@ -230,7 +230,7 @@ ad_VolCons(north) ==  T                            ! northern boundary
 ! Harmonic/biharmonic horizontal diffusion of tracer for nonlinear model
 ! and adjoint-based algorithms: [1:NAT+NPT,Ngrids].
 
-        TNU2 == 5*30.0d0                         ! m2/s
+        TNU2 == 5*0.10d0                         ! m2/s
         TNU4 == 2*0.0d0                         ! m4/s
 
      ad_TNU2 == 0.0d0  0.0d0                    ! m2/s
@@ -413,7 +413,7 @@ Fstate(isTsur) == F F                      ! NT surface tracers flux
     SO_decay == 2.0d0                      ! days
 
 ! Stochastic Optimals surface forcing standard deviation for
-! dimensionalization.  (Next 6 lines NEW)
+! dimensionalization.
 
 SO_sdev(isFsur) == 1.0d0                   ! free-surface
 SO_sdev(isUbar) == 1.0d0                   ! 2D U-momentum
@@ -447,7 +447,7 @@ Hout(idTvar) == T T                        ! temperature and salinity
 
 Hout(idPair) == F        !Pair		   ! surface air pressure
 Hout(idUair) == F                          ! surface U-wind
-Hour(idVair) == F                          ! surface V-wind
+Hout(idVair) == F                          ! surface V-wind
 Hout(idUsms) == F                          ! surface U-stress
 Hout(idVsms) == F                          ! surface V-stress
 Hout(idUbms) == F                          ! bottom U-stress
@@ -499,15 +499,15 @@ Hout(idLhea) == F                          ! latent heat flux
 Hout(idShea) == F                          ! sensible heat flux
 Hout(idLrad) == F                          ! longwave radiation flux
 Hout(idSrad) == F                          ! shortwave radiation flux
-Hout(idEmPf) == T                          ! E-P flux
+Hout(idEmPf) == F                          ! E-P flux
 Hout(idevap) == F                          ! evaporation rate
 Hout(idrain) == F                          ! precipitation rate
 
 Hout(idDano) == T                          ! density anomaly
 Hout(idSSSf) == F                          ! surface salinity flux correction
-Hout(idVvis) == T                          ! vertical viscosity
-Hout(idTdif) == T                          ! vertical T-diffusion
-Hout(idSdif) == T                          ! vertical Salinity diffusion
+Hout(idVvis) == F                          ! vertical viscosity
+Hout(idTdif) == F                          ! vertical T-diffusion
+Hout(idSdif) == F                          ! vertical Salinity diffusion
 Hout(idHsbl) == F                          ! depth of surface boundary layer
 Hout(idHbbl) == F                          ! depth of bottom boundary layer
 Hout(idMtke) == F                          ! turbulent kinetic energy
@@ -613,7 +613,7 @@ Aout(idSSSf) == F
 Aout(idVvis) == T       ! AKv                vertical viscosity
 Aout(idTdif) == T       ! AKt                vertical T-diffusion
 Aout(idSdif) == T       ! AKs                vertical Salinity diffusion
-Aout(idHsbl) == F       ! Hsbl               depth of surface boundary layer
+Aout(idHsbl) == T       ! Hsbl               depth of surface boundary layer
 Aout(idHbbl) == F       ! Hbbl               depth of bottom boundary layer
 
 Aout(id2dRV) == F       ! pvorticity_bar     2D relative vorticity
@@ -712,8 +712,8 @@ Dout(iTvdif) == T T     ! temp_vdiff, ...    vertical diffusion
 
 ! Input NetCDF file names, [1:Ngrids].
 
-     GRDNAME == /scratch-lustre/scumb002/Forcing/ross_grd.ishelf.davey.r36.5km.nc
-     ININAME == /scratch-lustre/scumb002/Forcing/ross_rst.088.cdw.yr6.3dye.5km.nc
+     GRDNAME == /scratch-lustre/scumb002/Forcing/ross_grd.ishelf.davey.r36.small.nc
+     ININAME == /scratch-lustre/scumb002/Forcing/ross_rst.088.cdw.yr6.3dye.small.nc
      ITLNAME == ocean_itl.nc
      IRPNAME == ocean_irp.nc
      IADNAME == ocean_iad.nc
@@ -735,10 +735,10 @@ Dout(iTvdif) == T T     ! temp_vdiff, ...    vertical diffusion
 ! except the last one.
 
      NCLMFILES == 1                         ! number of climate files
-     CLMNAME == /scratch-lustre/scumb002/Forcing/ross_clm.ishelf.davey.3dye.r36.5km.nc
+     CLMNAME == /scratch-lustre/scumb002/Forcing/ross_clm.ishelf.davey.3dye.r36.small.nc
 
      NBCFILES == 1                          ! number of boundary files
-     BRYNAME == /scratch-lustre/scumb002/Forcing/ross_boundary.davey.3dye.r36.1012.5km.nc
+     BRYNAME == /scratch-lustre/scumb002/Forcing/ross_boundary.davey.3dye.r36.1012.small.nc
 
 
 ! Input forcing NetCDF file name(s).  The USER has the option to enter
@@ -753,27 +753,27 @@ Dout(iTvdif) == T T     ! temp_vdiff, ...    vertical diffusion
 
      NFFILES == 1                          ! number of forcing files
 
-     FRCNAME == /scratch-lustre/scumb002/Forcing/ross_forcing.ishelf.eraint.ice.1012.5km.nc
+     FRCNAME == /scratch-lustre/scumb002/Forcing/ross_forcing.ishelf.eraint.ice.1012.small.nc 
 
 ! Output NetCDF file names, [1:Ngrids].
 
      GSTNAME == ross_gst.nc
-     RSTNAME == /scratch-lustre/scumb002/Output/059/ross_rst.nc
-     HISNAME == /scratch-lustre/scumb002/Output/059/ross_his.nc
+     RSTNAME == /scratch-lustre/scumb002/Output/061/ross_rst_061.nc
+     HISNAME == /scratch-lustre/scumb002/Output/061/ross_his.nc
      TLMNAME == ross_tlm.nc
      TLFNAME == ross_tlf.nc
      ADJNAME == ross_adj.nc
-     AVGNAME == /scratch-lustre/scumb002/Output/059/ross_avg.nc
-     DIANAME == /scratch-lustre/scumb002/Output/059/ross_dia.nc
-     STANAME == /scratch-lustre/scumb002/Output/059/ross_sta_059.nc
+     AVGNAME == /scratch-lustre/scumb002/Output/061/ross_avg.nc
+     DIANAME == /scratch-lustre/scumb002/Output/061/ross_dia.nc
+     STANAME == /scratch-lustre/scumb002/Output/061/ross_sta_061.nc
      FLTNAME == ross_flt.nc
 
 ! Input ASCII parameter filenames.
 
      APARNAM =  ROMS/External/s4dvar.in
-     SPOSNAM =  Apps/ROSS/stations.ROSS.in
+     SPOSNAM =  Apps/ROSSsmall/stations.ROSS.in
      FPOSNAM =  ROMS/External/floats.in
-     IPARNAM =  Apps/ROSS/ice.in
+     IPARNAM =  Apps/ROSSsmall/ice.in
      BPARNAM =  ROMS/External/bio_Fennel.in
      SPARNAM =  ROMS/External/sediment.in
      USRNAME =  ROMS/External/MyFile.dat

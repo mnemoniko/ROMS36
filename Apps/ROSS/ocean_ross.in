@@ -230,7 +230,7 @@ ad_VolCons(north) ==  T                            ! northern boundary
 ! Harmonic/biharmonic horizontal diffusion of tracer for nonlinear model
 ! and adjoint-based algorithms: [1:NAT+NPT,Ngrids].
 
-        TNU2 == 5*5.0d0                         ! m2/s
+        TNU2 == 5*30.0d0                         ! m2/s
         TNU4 == 2*0.0d0                         ! m4/s
 
      ad_TNU2 == 0.0d0  0.0d0                    ! m2/s
@@ -758,14 +758,14 @@ Dout(iTvdif) == T T     ! temp_vdiff, ...    vertical diffusion
 ! Output NetCDF file names, [1:Ngrids].
 
      GSTNAME == ross_gst.nc
-     RSTNAME == /scratch-lustre/scumb002/Output/056/ross_rst.nc
-     HISNAME == /scratch-lustre/scumb002/Output/056/ross_his.nc
+     RSTNAME == /scratch-lustre/scumb002/Output/059/ross_rst.nc
+     HISNAME == /scratch-lustre/scumb002/Output/059/ross_his.nc
      TLMNAME == ross_tlm.nc
      TLFNAME == ross_tlf.nc
      ADJNAME == ross_adj.nc
-     AVGNAME == /scratch-lustre/scumb002/Output/056/ross_avg.nc
-     DIANAME == /scratch-lustre/scumb002/Output/056/ross_dia.nc
-     STANAME == /scratch-lustre/scumb002/Output/056/ross_sta_056.nc
+     AVGNAME == /scratch-lustre/scumb002/Output/059/ross_avg.nc
+     DIANAME == /scratch-lustre/scumb002/Output/059/ross_dia.nc
+     STANAME == /scratch-lustre/scumb002/Output/059/ross_sta_059.nc
      FLTNAME == ross_flt.nc
 
 ! Input ASCII parameter filenames.

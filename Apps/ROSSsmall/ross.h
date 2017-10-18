@@ -38,7 +38,7 @@
 #define LMD_CONVEC
 #define LMD_SKPP
 #define LMD_NONLOCAL
-#define LMD_BKPP
+#undef  LMD_BKPP
 #undef  LMD_SHAPIRO
 
 #undef  RADIATION_2D     /* Think about this */
@@ -81,7 +81,7 @@
 # define CLOUDS
 #endif
 
-#define STATIONS
+#undef STATIONS
 #define ICESHELF
 #define ICESHELF_3EQ
 #define AVERAGES
@@ -105,8 +105,4 @@
 # define ADD_M2OBC
 # define RAMP_TIDES
 #endif
-
-/* Add in for dye_04 */
-#define TCLIMATOLOGY
-#define TCLM_NUDGING
 
