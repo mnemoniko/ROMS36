@@ -231,7 +231,7 @@ ad_VolCons(north) ==  T                            ! northern boundary
 ! Harmonic/biharmonic horizontal diffusion of tracer for nonlinear model
 ! and adjoint-based algorithms: [1:NAT+NPT,Ngrids].
 
-        TNU2 == 6*5.0d0                         ! m2/s
+        TNU2 == 6*0.0d0                         ! m2/s
         TNU4 == 2*0.0d0                         ! m4/s
 
      ad_TNU2 == 0.0d0  0.0d0                    ! m2/s
@@ -713,8 +713,8 @@ Dout(iTvdif) == T T     ! temp_vdiff, ...    vertical diffusion
 
 ! Input NetCDF file names, [1:Ngrids].
 
-     GRDNAME == /scratch/scumb002/Forcing/ross_grd.ishelf.davey.r36.5km.nc
-     ININAME == /scratch/scumb002/Forcing/ross_rst.088.cdw.yr6.4dye.5km.nc
+     GRDNAME == /scratch-lustre/scumb002/Forcing/ross_grd.ishelf.davey.r36.5km.nc
+     ININAME == /scratch-lustre/scumb002/Forcing/ross_rst.088.cdw.yr6.4dye.5km.nc
      ITLNAME == ocean_itl.nc
      IRPNAME == ocean_irp.nc
      IADNAME == ocean_iad.nc
@@ -736,10 +736,10 @@ Dout(iTvdif) == T T     ! temp_vdiff, ...    vertical diffusion
 ! except the last one.
 
      NCLMFILES == 1                         ! number of climate files
-     CLMNAME == /scratch/scumb002/Forcing/ross_clm.ishelf.davey.4dye.r36.5km.nc
+     CLMNAME == /scratch-lustre/scumb002/Forcing/ross_clm.ishelf.davey.4dye.r36.5km.nc
 
      NBCFILES == 1                          ! number of boundary files
-     BRYNAME == /scratch/scumb002/Forcing/ross_boundary.davey.4dye.r36.1012.5km.nc
+     BRYNAME == /scratch-lustre/scumb002/Forcing/ross_boundary.davey.4dye.r36.1012.5km.nc
 
 
 ! Input forcing NetCDF file name(s).  The USER has the option to enter
@@ -754,19 +754,19 @@ Dout(iTvdif) == T T     ! temp_vdiff, ...    vertical diffusion
 
      NFFILES == 1                          ! number of forcing files
 
-     FRCNAME == /scratch/scumb002/Forcing/ross_forcing.ishelf.eraint.ice.1012.5km.nc
+     FRCNAME == /scratch-lustre/scumb002/Forcing/ross_forcing.ishelf.eraint.ice.1012.5km.nc
 
 ! Output NetCDF file names, [1:Ngrids].
 
      GSTNAME == ross_gst.nc
-     RSTNAME == /scratch/scumb002/Output/050/ross_rst.nc
-     HISNAME == /scratch/scumb002/Output/050/ross_his.nc
+     RSTNAME == /scratch-lustre/scumb002/Output/063/ross_rst.nc
+     HISNAME == /scratch-lustre/scumb002/Output/063/ross_his.nc
      TLMNAME == ross_tlm.nc
      TLFNAME == ross_tlf.nc
      ADJNAME == ross_adj.nc
-     AVGNAME == /scratch/scumb002/Output/050/ross_avg.nc
-     DIANAME == /scratch/scumb002/Output/050/ross_dia.nc
-     STANAME == /scratch/scumb002/Output/050/ross_sta_050.nc
+     AVGNAME == /scratch-lustre/scumb002/Output/063/ross_avg.nc
+     DIANAME == /scratch-lustre/scumb002/Output/063/ross_dia.nc
+     STANAME == /scratch-lustre/scumb002/Output/063/ross_sta_050.nc
      FLTNAME == ross_flt.nc
 
 ! Input ASCII parameter filenames.

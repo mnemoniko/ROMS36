@@ -58,7 +58,7 @@ $(if $(filter $(MAKE_VERSION),$(NEED_VERSION)),,        \
 #  the .h extension. For example, the upwelling application includes the
 #  "upwelling.h" header file.
 
-ROMS_APPLICATION ?= ROSS
+ROMS_APPLICATION ?= ROSS 
 
 #  If application header files is not located in "ROMS/Include",
 #  provide an alternate directory FULL PATH.
@@ -88,7 +88,7 @@ MY_CPP_FLAGS ?=
 
 #  Activate debugging compiler options:
 
-   USE_DEBUG ?=
+   USE_DEBUG ?=  
 
 #  If parallel applications, use at most one of these definitions
 #  (leave both definitions blank in serial applications):
@@ -406,7 +406,7 @@ endif
 		ROMS/Nonlinear/Biology \
 		ROMS/Nonlinear/Sediment \
 		ROMS/Functionals \
-                ROMS/Utility \
+	        ROMS/Utility \
 		ROMS/Modules
 ifdef USE_SEAICE
  modules +=     ROMS/SeaIce
@@ -484,7 +484,9 @@ $(SCRATCH_DIR):
 # FFLAGS += -Mprof=mpi,lines              # pgi
 # FFLAGS += -Mprof=mpi,hwcts              # pgi
 # FFLAGS += -Mprof=func                   # pgi
-
+#Added for larger memory model runs:
+# FFLAGS += -mcmodel=medium 
+# remove -shared-intel for DEBUG mode.
 #--------------------------------------------------------------------------
 #  Special CPP macros for mod_strings.F
 #--------------------------------------------------------------------------
@@ -579,3 +581,4 @@ rm_macros:
 
 print-%:
 	@echo $* = $($*)
+# DO NOT DELETE THIS LINE - used by make depend
