@@ -176,7 +176,7 @@
       real(r8), parameter :: u0 = 1.6_r8
 #endif
 #ifdef ISOMIP_PLUS
-      real(r8) :: T0i, S0i, Tboti, Bmax
+      real(r8) :: T0i, S0i, Tboti, Sboti, Bmax
 #endif
       real(r8) :: depth, dx, val1, val2, val3, val4, x, x0, y, y0
 
