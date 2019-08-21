@@ -1,6 +1,6 @@
 # svn $Id: makefile 604 2012-02-03 20:49:10Z arango $
 #::::::::::::::::::::::::::::::::::::::::::::::::::::: Hernan G. Arango :::
-# Copyright (c) 2002-2012 The ROMS/TOMS Group             Kate Hedstrom :::
+# Copyright (c) 2002-2016 The ROMS/TOMS Group             Kate Hedstrom :::
 #   Licensed under a MIT/X style license                                :::
 #   See License_ROMS.txt                                                :::
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -28,7 +28,7 @@
 #                                                                       :::
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-#NEED_VERSION := 3.80 3.81 3.82
+#NEED_VERSION := 3.80 3.81 3.82 4.0 4.1
 #$(if $(filter $(MAKE_VERSION),$(NEED_VERSION)),,        \
 # $(error This makefile requires one of GNU make version $(NEED_VERSION).))
 
@@ -58,12 +58,12 @@
 #  the .h extension. For example, the upwelling application includes the
 #  "upwelling.h" header file.
 
-ROMS_APPLICATION ?= ROSS 
+ROMS_APPLICATION ?=
 
 #  If application header files is not located in "ROMS/Include",
 #  provide an alternate directory FULL PATH.
 
-MY_HEADER_DIR ?= /home/scumb002/ROMS36/Apps/ROSS
+MY_HEADER_DIR ?=
 
 #  If your application requires analytical expressions and they are
 #  not located in "ROMS/Functionals", provide an alternate directory.
@@ -73,7 +73,7 @@ MY_HEADER_DIR ?= /home/scumb002/ROMS36/Apps/ROSS
 #  If applicable, also used this directory to place your customized
 #  biology model header file (like fennel.h, nemuro.h, ecosim.h, etc).
 
-MY_ANALYTICAL_DIR ?= /home/scumb002/ROMS36/Apps/ROSS
+MY_ANALYTICAL_DIR ?=
 
 #  Sometimes it is desirable to activate one or more CPP options to
 #  run different variants of the same application without modifying
@@ -138,7 +138,7 @@ MY_CPP_FLAGS ?=
 #  NetCDF and so on.
 #--------------------------------------------------------------------------
 
-        FORT ?= mpif90
+        FORT ?= gfortran
 
 #--------------------------------------------------------------------------
 #  Set directory for executable.
