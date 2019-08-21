@@ -74,7 +74,9 @@
 !
       integer :: i, itrc, j, k
       real(r8) :: val1, val2, val3, val4
-
+#ifdef ISOMIP_PLUS
+      real(r8) :: Tbot, Sbot, T02, S02, Bmax
+#endif	
 #include "set_bounds.h"
 !
 !-----------------------------------------------------------------------
@@ -109,6 +111,25 @@
             tclm(i,j,k,iFe) = MIN(val2, val1 - GRID(ng)%z_r(i,j,k)*val3)
           END DO
         END DO
+      END DO
+#elif define ISOMIP_PLUS
+# ifdef ISOMIP_PLUS_FORCECOLD
+      Tbot = -1.9_r8
+      Sbot = 34.55_r8
+# elif defined ISOMIP_PLUS_FORCEWARM
+      Tbot = 1.0_r8
+      Sbot = 34.7_r8
+# endif
+      T02 = -1.9_r8
+      S02 = 33.8_r8
+      Bmax = 720.0_r8
+      DO k=1,N(ng)
+	DO j=JstrT,JendT
+          DO i=IstrT,IendT
+	    CLIMA(ng)%tclm(i,j,k,itemp)=T02 + (Tbot - T02)*(-GRID(ng)%z_r(i,j,k)/Bmax)
+	    CLIMA(ng)%tclm(i,j,k,isalt)=S02 + (Sbot - S02)*(-GRID(ng)%z_r(i,j,k)/Bmax)
+	  END DO
+	END DO
       END DO
 #else
       DO k=1,N(ng)

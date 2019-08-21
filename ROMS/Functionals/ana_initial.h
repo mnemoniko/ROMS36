@@ -175,6 +175,9 @@
       real(r8), parameter :: guscale = 40.0E+03_r8
       real(r8), parameter :: u0 = 1.6_r8
 #endif
+#ifdef ISOMIP_PLUS
+      real(r8) :: T0i, S0i, Tboti, Bmax
+#endif
       real(r8) :: depth, dx, val1, val2, val3, val4, x, x0, y, y0
 
 #include "set_bounds.h"
@@ -738,6 +741,28 @@
           END DO
         END DO
       END DO
+# elif defined ISOMIP_PLUS   !!Formulation taken from ROMS_IceShelf
+#  ifdef ISOMIP_PLUS_INICOLD
+      Tboti = -1.9_r8
+      Sboti = 34.55
+#  elif define ISOMIP_PLUS_INIWARM
+      Tboti = 1.0_r8
+      Sboti = 34.7_r8
+#  endif
+      T0i = -1.9_r8
+      S0i = 33.8_r8
+      Bmax = 720.0_r8
+      DO k=1,N(ng)
+        DO j=JstrR,JendR
+          DO i=IstrR,IendR
+            t(i,j,k,1,itemp)=T0i + (Tboti - T0i)*(-z_r(i,j,k)/Bmax)
+            t(i,j,k,1,isalt)=S0i + (Sboti - S0i)*(-z_r(i,j,k)/Bmax)
+            t(i,j,k,2,itemp)=t(i,j,k,1,itemp)
+            t(i,j,k,2,isalt)=t(i,j,k,1,isalt)
+          END DO
+        END DO
+      END DO
+
 # else
       DO k=1,N(ng)
         DO j=JstrR,JendR

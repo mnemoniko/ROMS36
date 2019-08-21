@@ -160,7 +160,6 @@
         END DO
       END DO
 # endif
-
 #else
 !
 !  Default nudging coefficients.  Set nudging coefficients uniformly to
