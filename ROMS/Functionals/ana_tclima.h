@@ -112,7 +112,7 @@
           END DO
         END DO
       END DO
-#elif define ISOMIP_PLUS
+#elif defined ISOMIP_PLUS
 # ifdef ISOMIP_PLUS_FORCECOLD
       Tbot = -1.9_r8
       Sbot = 34.55_r8

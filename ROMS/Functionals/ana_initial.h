@@ -741,7 +741,7 @@
           END DO
         END DO
       END DO
-# elif defined ISOMIP_PLUS   !!Formulation taken from ROMS_IceShelf
+# elif defined ISOMIP_PLUS
 #  ifdef ISOMIP_PLUS_INICOLD
       Tboti = -1.9_r8
       Sboti = 34.55
