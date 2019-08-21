@@ -126,8 +126,8 @@
       DO k=1,N(ng)
 	DO j=JstrT,JendT
           DO i=IstrT,IendT
-	    CLIMA(ng)%tclm(i,j,k,itemp)=T02 + (Tbot - T02)*(-GRID(ng)%z_r(i,j,k)/Bmax)
-	    CLIMA(ng)%tclm(i,j,k,isalt)=S02 + (Sbot - S02)*(-GRID(ng)%z_r(i,j,k)/Bmax)
+	    tclm(i,j,k,itemp)=T02 + (Tbot - T02)*(-GRID(ng)%z_r(i,j,k)/Bmax)
+	    tclm(i,j,k,isalt)=S02 + (Sbot - S02)*(-GRID(ng)%z_r(i,j,k)/Bmax)
 	  END DO
 	END DO
       END DO
