@@ -1,6 +1,6 @@
-# svn $Id$
+# svn $Id: Linux-gfortran.mk 1183 2010-03-02 01:39:29Z kate $
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-# Copyright (c) 2002-2016 The ROMS/TOMS Group                           :::
+# Copyright (c) 2002-2010 The ROMS/TOMS Group                           :::
 #   Licensed under a MIT/X style license                                :::
 #   See License_ROMS.txt                                                :::
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -13,6 +13,11 @@
 # FFLAGS         Flags to the fortran compiler
 # CPP            Name of the C-preprocessor
 # CPPFLAGS       Flags to the C-preprocessor
+# CC             Name of the C compiler
+# CFLAGS         Flags to the C compiler
+# CXX            Name of the C++ compiler
+# CXXFLAGS       Flags to the C++ compiler
+# CLEAN          Name of cleaning executable after C-preprocessing
 # NETCDF_INCDIR  NetCDF include directory
 # NETCDF_LIBDIR  NetCDF libary directory
 # LD             Program to load the objects into an executable
@@ -26,7 +31,16 @@
            FFLAGS := -frepack-arrays
               CPP := /usr/bin/cpp
          CPPFLAGS := -P -traditional
+               CC := gcc
+              CXX := g++
+           CFLAGS :=
+         CXXFLAGS :=
           LDFLAGS :=
+ifdef USE_CXX
+             LIBS := -lstdc++
+else
+             LIBS :=
+endif
                AR := ar
           ARFLAGS := -r
             MKDIR := mkdir -p
@@ -42,21 +56,24 @@
 #
 
 ifdef USE_NETCDF4
-        NC_CONFIG ?= nc-config
-    NETCDF_INCDIR ?= $(shell $(NC_CONFIG) --prefix)/include
-             LIBS := $(shell $(NC_CONFIG) --flibs)
+    NETCDF_INCDIR ?= /usr/local/netcdf4/include
+    NETCDF_LIBDIR ?= /usr/local/netcdf4/lib
+#      HDF5_LIBDIR ?= /u1/uaf/kate/lib
+#    NETCDF_INCDIR := /archive/u1/uaf/kate/netcdf/include
+#    NETCDF_LIBDIR := /archive/u1/uaf/kate/netcdf/lib
 else
     NETCDF_INCDIR ?= /usr/local/include
     NETCDF_LIBDIR ?= /usr/local/lib
-             LIBS := -L$(NETCDF_LIBDIR) -lnetcdf
+#    NETCDF_INCDIR ?= /archive/u1/uaf/kate/include
+#    NETCDF_LIBDIR ?= /archive/u1/uaf/kate/lib
+endif
+             LIBS += -L$(NETCDF_LIBDIR) -lnetcdf -lnetcdff
+ifdef USE_NETCDF4
+             LIBS += -L$(HDF5_LIBDIR) -lhdf5_hl -lhdf5 -lz
 endif
 
 ifdef USE_ARPACK
- ifdef USE_MPI
-   PARPACK_LIBDIR ?= /opt/gfortransoft/PARPACK
-             LIBS += -L$(PARPACK_LIBDIR) -lparpack
- endif
-    ARPACK_LIBDIR ?= /opt/gfortransoft/PARPACK
+    ARPACK_LIBDIR ?= /usr/local/lib
              LIBS += -L$(ARPACK_LIBDIR) -larpack
 endif
 
@@ -71,13 +88,16 @@ endif
 
 ifdef USE_OpenMP
          CPPFLAGS += -D_OPENMP
-           FFLAGS += -fopenmp
 endif
 
 ifdef USE_DEBUG
            FFLAGS += -g -fbounds-check
+           CFLAGS += -g
+         CXXFLAGS += -g
 else
            FFLAGS += -O3 -ffast-math
+           CFLAGS += -O3
+         CXXFLAGS += -O3
 endif
 
 ifdef USE_MCT
@@ -87,8 +107,8 @@ ifdef USE_MCT
              LIBS += -L$(MCT_LIBDIR) -lmct -lmpeu
 endif
 
-ifdef MAKE_SHAREDLIB
-           FFLAGS += -fPIC
+ifdef USE_MPI
+           FFLAGS += -I/usr/include
 endif
 
 ifdef USE_ESMF
@@ -130,9 +150,12 @@ endif
 # local directory and compilation flags inside the code.
 #
 
-$(SCRATCH_DIR)/mod_ncparam.o: FFLAGS += -ffree-form -ffree-line-length-none
-$(SCRATCH_DIR)/mod_strings.o: FFLAGS += -ffree-form -ffree-line-length-none
-$(SCRATCH_DIR)/analytical.o: FFLAGS += -ffree-form -ffree-line-length-none
+#$(SCRATCH_DIR)/mod_ncparam.o: FFLAGS += -ffree-form -ffree-line-length-none
+#$(SCRATCH_DIR)/mod_strings.o: FFLAGS += -ffree-form -ffree-line-length-none
+#$(SCRATCH_DIR)/analytical.o: FFLAGS += -ffree-form -ffree-line-length-none
+$(SCRATCH_DIR)/mod_ncparam.o: FFLAGS += -ffree-form
+$(SCRATCH_DIR)/mod_strings.o: FFLAGS += -ffree-form
+$(SCRATCH_DIR)/analytical.o: FFLAGS += -ffree-form
 $(SCRATCH_DIR)/biology.o: FFLAGS += -ffree-form -ffree-line-length-none
 ifdef USE_ADJOINT
 $(SCRATCH_DIR)/ad_biology.o: FFLAGS += -ffree-form -ffree-line-length-none
